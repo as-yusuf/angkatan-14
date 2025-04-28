@@ -1,0 +1,64 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  background-color: black;
+}
+
+#container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+#page-image {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+#text-overlay {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #6e5a3d;
+  text-align: center;
+  /* text-shadow: 2px 2px 4px rgba(0,0,0,0.7); */
+  padding: 10px;
+  display: none;
+  background: white;
+  border-radius: 20px;
+}
+
+#text-overlay.show {
+  display: block;
+}
+
+#back-button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  display: none;
+  border-radius: 5px;
+}

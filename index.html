@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Digital</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="bg-music" src="assets/music.mp3" autoplay loop></audio>
+  <div id="container">
+    <img id="page-image" src="assets/page1.jpg" alt="Halaman Undangan" />
+    <div id="text-overlay" class="show">
+      <p>Kepada Orang Tua/ Wali:</p>
+      <p>NAMA SISWA</p>
+    </div>
+    
+  </div>
+  <script src="script.js"></script>
+  <script>
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  const recipient = getQueryParam('to');
+  if (recipient) {
+    const greetingDiv = document.getElementById('text-overlay');
+    greetingDiv.innerText = `Kepada Orang Tua/ Wali dari: ${decodeURIComponent(recipient)}`;
+  }
+</script>
+</body>
+</html>
