@@ -35,7 +35,7 @@ backButton.addEventListener('click', () => {
 
 // Autoplay workaround for some browsers
 window.addEventListener('DOMContentLoaded', () => {
-  const music = document.getElementById('bg-music');
+  const music = document.getElementById('myAudio');
   const playAudio = () => {
     music.play().catch(() => {});
     window.removeEventListener('click', playAudio);
