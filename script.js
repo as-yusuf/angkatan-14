@@ -27,7 +27,7 @@ container.addEventListener('click', () => {
 });
 
 backButton.addEventListener('click', () => {
-  currentPage = 0;
+  currentPage = -1;
   image.src = pages[currentPage];
   overlay.classList.add("show");
   backButton.style.display = "none";
